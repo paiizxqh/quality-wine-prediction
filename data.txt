@@ -1,0 +1,13 @@
+new_data = pd.DataFrame({
+    'fixed acidity': [11.2],
+    'volatile acidity': [0.28],
+    'citric acid': [0.56],
+    'residual sugar': [1.9],
+    'chlorides': [0.075],
+    'free sulfur dioxide': [17],
+    'total sulfur dioxide': [60],
+    'density': [0.9980],
+    'pH': [3.16],
+    'sulphates': [0.58],
+    'alcohol': [9.8],
+})
