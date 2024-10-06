@@ -1,6 +1,4 @@
-แน่นอน! นี่คือไฟล์ **`README.md`** สำหรับโปรเจค "Wine Quality Prediction" ที่คุณสร้างขึ้นโดยใช้ React และ Flask พร้อมการทำนายคุณภาพไวน์ด้วย **Random Forest Classifier**:
-
-### README.md
+### Wine Quality Prediction
 
 ```markdown
 # Wine Quality Prediction
