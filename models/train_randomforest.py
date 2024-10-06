@@ -8,6 +8,9 @@ import matplotlib.pyplot as plt
 import graphviz
 from sklearn.tree import export_graphviz
 import joblib
+from sklearn.metrics import f1_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import confusion_matrix
 
 # โหลดข้อมูล
 data = pd.read_csv(r'data\winequality-red.csv', sep=";")
@@ -26,7 +29,8 @@ y_pred = model.predict(X_test)
 # ประเมินผลด้วย Accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy}")
-tree_in_forest = model.estimators_[0]  # เลือกต้นไม้ต้นแรกจาก Random Forest
+
+#tree_in_forest = model.estimators_[0]  # เลือกต้นไม้ต้นแรกจาก Random Forest
 """
 plt.figure(figsize=(260, 200))
 tree.plot_tree(tree_in_forest, filled=True, feature_names=X.columns, rounded=True)
@@ -77,4 +81,4 @@ new_data = pd.DataFrame({
 
 prediction = model.predict(new_data)
 print(f"Predicted Quality: {prediction[0]}")
-joblib.dump(model, 'model_randomforest.joblib')
+#joblib.dump(model, 'model_randomforest.joblib')
