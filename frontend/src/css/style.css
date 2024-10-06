@@ -1,0 +1,173 @@
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes stampAppear {
+    0% { opacity: 0; transform: scale(0) rotate(-45deg); }
+    85% { opacity: 0.9; transform: scale(1.1) rotate(15deg); }
+    100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+.vintage-layout {
+    background: url('../assets/images/vintage-paper-texture.jpg') repeat;
+    font-family: 'Vintage Goods', serif;
+    overflow-x: hidden;
+    min-height: 100vh; /* ทำให้เลย์เอาต์มีความสูงเต็มที่ */
+}
+
+.vintage-decorations {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.decoration {
+    position: fixed;
+    width: 300px;
+    opacity: 0.6;
+}
+
+.decoration.left {
+    left: -100px;
+    top: 50%;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.decoration.right {
+    right: -100px;
+    top: 30%;
+    transform: scaleX(-1);
+    animation: fadeIn 1.5s ease-out 0.3s forwards;
+}
+
+.vintage-header {
+    background-color: rgba(128, 0, 32, 0.9);
+    padding: 4px 0;
+    text-align: center;
+    border-bottom: 3px solid #daa520;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1s ease-out;
+}
+
+.header-content {
+    font-size: 32px;
+    color: #f7e8d0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.vintage-content {
+    padding: 40px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.content-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vintage-stamp {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 150px;
+    height: 150px;
+    background: url('../assets/images/vintage-stamp.png') no-repeat center/contain;
+    opacity: 0;
+    animation: stampAppear 1s ease-out 1s forwards;
+    z-index: 3;
+}
+
+.vintage-card {
+    animation: fadeIn 1s ease-out 0.5s both;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 2px solid #daa520;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* เพิ่มการ padding เพื่อให้เนื้อหาดูไม่อัดแน่น */
+}
+
+.vintage-form .ant-form-item {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.vintage-form .ant-form-item:nth-child(1) { animation-delay: 0.6s; }
+.vintage-form .ant-form-item:nth-child(2) { animation-delay: 0.7s; }
+.vintage-form .ant-form-item:nth-child(3) { animation-delay: 0.8s; }
+/* ... continue for all form items */
+
+.vintage-footer {
+    background-color: rgba(128, 0, 32, 0.9);
+    color: #f7e8d0;
+    padding: 15px 0;
+    text-align: center;
+    border-top: 3px solid #daa520;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-content {
+    position: relative;
+}
+
+.footer-decoration {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    width: 200px;
+    opacity: 0.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .decoration {
+        width: 150px;
+    }
+    
+    .decoration.left {
+        left: -50px;
+    }
+    
+    .decoration.right {
+        right: -50px;
+    }
+    
+    .vintage-stamp {
+        width: 100px;
+        height: 100px;
+        top: -20px;
+        right: -20px;
+    }
+}
+
+.vintage-button {
+    background-color: #e63946; /* สีแดงไวน์ */
+    border: none; /* ไม่มีกรอบ */
+    color: #fff; /* สีข้อความ */
+    border-radius: 5px; /* มุมมน */
+    padding: 10px 20px; /* ระยะห่าง */
+    font-size: 16px; /* ขนาดฟอนต์ */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* เอฟเฟกต์การเปลี่ยนสี */
+}
+
+.vintage-button:hover {
+    background-color: #d62839; /* เปลี่ยนสีเมื่อโฮเวอร์ */
+    transform: scale(1.05); /* ขยายขนาดเล็กน้อยเมื่อโฮเวอร์ */
+}
+
+.vintage-button:focus {
+    outline: none; /* ไม่มีกรอบเมื่อโฟกัส */
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5); /* เงาเมื่อโฟกัส */
+}
