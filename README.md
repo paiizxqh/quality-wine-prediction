@@ -1,5 +1,3 @@
-### Wine Quality Prediction
-
 # Wine Quality Prediction
 
 ## Overview
@@ -132,10 +130,8 @@ wine-quality-prediction/
     "predicted_quality": 6
   }
   ```
----
-### Notes:
-- Make sure the Flask backend is running before interacting with the React frontend.
-- You may need to adjust the API URL in `Prediction.tsx` if you deploy the backend to a different server.
 
+```bash
 Happy coding! 🍷✨
 ```
+---
