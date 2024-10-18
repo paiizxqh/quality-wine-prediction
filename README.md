@@ -1,6 +1,5 @@
 ### Wine Quality Prediction
 
-```markdown
 # Wine Quality Prediction
 
 ## Overview
@@ -133,12 +132,7 @@ wine-quality-prediction/
     "predicted_quality": 6
   }
   ```
-
-## License
-This project is licensed under the MIT License. Feel free to use, modify, and distribute this software as needed.
-
 ---
-
 ### Notes:
 - Make sure the Flask backend is running before interacting with the React frontend.
 - You may need to adjust the API URL in `Prediction.tsx` if you deploy the backend to a different server.
