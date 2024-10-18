@@ -3,16 +3,6 @@
 ## Overview
 The **Wine Quality Prediction** project is a web application that predicts the quality of wine based on its physicochemical properties. The prediction model uses a **Random Forest Classifier** trained on the wine dataset. This project aims to provide an interactive and easy-to-use interface for predicting wine quality, using **React** on the frontend and **Flask** for the backend API.
 
-## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Setup and Installation](#setup-and-installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [API Documentation](#api-documentation)
-- [License](#license)
-
 ## Features
 - Predict the quality of wine based on various physicochemical properties such as acidity, sugar content, and alcohol levels.
 - Uses **Random Forest Classifier** to provide accurate predictions.
@@ -131,7 +121,6 @@ wine-quality-prediction/
   }
   ```
 
-```bash
 Happy coding! 🍷✨
-```
+
 ---
